@@ -35,12 +35,27 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		echo $this->fetch('css');
 		echo $this->fetch('script');
 
+//     ====== IMAGE ASSETS =======
+    echo $this->Html->image(array(
+        "/login/images/bg-01.jpg",
+        '/login/images/icons/favicon.ico'
+    ));
 
 //      ======= BOOTSTRAP CSS ASSETS =======
 		echo $this->Html->css(array(
 		    'css/bootsrap/bootstrap.css',
             'css/bootsrap/bootstrap-grid.css',
-            'css/bootsrap/bootstrap-reboot.css'
+            'css/bootsrap/bootstrap-reboot.css',
+            '/login/css/main.css',
+            '/login/css/util.css',
+            '/login/fonts/font-awesome/css/font-awesome.css',
+            '/login/fonts/font-awesome/css/font-awesome.min.css',
+            '/login/fonts/iconic/css/material-design-iconic-font.min.css',
+            '/login/vendor/animate/animate.css',
+            '/login/vendor/css-hamburgers/hamburgers.min.css',
+            '/login/vendor/animsition/css/animsition.min.css',
+            '/login/vendor/select2/select2.min.css',
+            '/login/vendor/daterangepicker/daterangepicker.css'
         ));
 
 //		======= BOOTSRAP FONT ASSETS =======
@@ -51,7 +66,9 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
     //		======= BOOTSTRAP JAVASCRIPT ASSETS =======
     echo $this->Html->script(array(
         'js/bootstrap/bootstrap.bundle.js',
-        'js/bootstrap/bootstrap.js'
+        'js/bootstrap/bootstrap.js',
+        '/login/js/main.js',
+        '/login/'
     ));
 
     ?>
@@ -87,6 +104,20 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 
 		</div>
 	</div>
+
+    <?php
+    echo $this->Html->script(array(
+        '/login/vendor/jquery/jquery-3.2.1.min.js',
+        '/login/vendor/animsition/js/animsition.min.js',
+        '/login/vendor/bootstrap/js/popper.js',
+        '/login/vendor/bootsrap/js/bootstrap.min.js',
+        '/login/vendor/select2/select2.min.js',
+        '/login/vendor/daterangepicker/moment.min.js',
+        '/login/vendor/daterangepicker/daterangepicker.js',
+        '/login/vendor/countdowntime/countdowntime.js',
+        '/login/js/main.js'
+    ));
+    ?>
 
 </body>
 </html>

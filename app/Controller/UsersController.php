@@ -41,4 +41,23 @@ class UsersController extends AppController {
     public function logout(){
         return $this->redirect($this->Auth->logout());
     }
+
+    /*
+ * User profile page
+ */
+//    public function profile(){
+//        $this->viewBuilder()->layout('dashboard_layout');
+//        if($this->Auth->user('id') > 0){
+//            $userDetails = $this->Users->get($this->Auth->user('id'));
+//            $currentPswd = $userDetails->password; //Used in change password to restrict user to add the same password again
+//            $this->set(compact('userDetails','userDevices', 'currentPswd'));
+//        }else{
+//            return $this->redirect(['action' => 'welcome']);
+//        }
+//    }
+
+
+
+
+
 }

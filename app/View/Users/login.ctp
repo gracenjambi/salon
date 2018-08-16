@@ -1,31 +1,4 @@
-<head>
-    <?php
-        echo $this->Html->css(array(
-                '/login/css/main.css',
-                '/login/css/util.css',
-                '/login/fonts/font-awesome/css/font-awesome.css',
-                '/login/fonts/font-awesome/css/font-awesome.min.css',
-                '/login/fonts/iconic/css/material-design-iconic-font.min.css',
-                '/login/vendor/animate/animate.css',
-                '/login/vendor/css-hamburgers/hamburgers.min.css',
-                '/login/vendor/animsition/css/animsition.min.css',
-                '/login/vendor/select2/select2.min.css',
-                '/login/vendor/daterangepicker/daterangepicker.css'
-        ));
 
-        echo $this->Html->script(array(
-                '/login/js/main.js',
-                '/login/'
-        ));
-
-        echo $this->Html->image(array(
-                "/login/images/bg-01.jpg",
-                '/login/images/icons/favicon.ico'
-                ));
-
-    ?>
-</head>
-<body>
 
 <div class="limiter">
     <div class="container-login100" style="background-image: url('/login/images/bg-01.jpg');">
@@ -99,19 +72,3 @@
 
 <div id="dropDownSelect1"></div>
 
-<?php
-    echo $this->Html->script(array(
-         '/login/vendor/jquery/jquery-3.2.1.min.js',
-        '/login/vendor/animsition/js/animsition.min.js',
-        '/login/vendor/bootstrap/js/popper.js',
-        '/login/vendor/bootsrap/js/bootstrap.min.js',
-        '/login/vendor/select2/select2.min.js',
-        '/login/vendor/daterangepicker/moment.min.js',
-        '/login/vendor/daterangepicker/daterangepicker.js',
-        '/login/vendor/countdowntime/countdowntime.js',
-        '/login/js/main.js'
-    ));
-?>
-
-</body>
-</html>
