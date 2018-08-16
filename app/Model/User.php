@@ -10,12 +10,30 @@ class User extends AppModel {
                 'message' => 'Please enter a username'
             )
         ),
-        'password' => array(
+        'firstname' => array(
+            'required' => array(
+                'rule' => 'notEmpty',
+                'message' => 'Please enter your first name'
+            )
+        ),
+        'lastname' => array(
+            'required' => array(
+                'rule' => 'notEmpty',
+                'message' => 'Please enter your last name'
+            )
+        ),
+        'emailaddress' => array(
+            'required' => array(
+                'rule' => 'notEmpty',
+                'message' => 'Please enter your email address'
+            )
+        ),
+         'password' => array(
             'required' => array(
                 'rule' => 'notEmpty',
                 'message' => 'Please enter a password'
             )
-        )
+        ),
     );
 
     public function beforeSave($options = array()){
@@ -24,7 +42,7 @@ class User extends AppModel {
         }
         if (isset($this->data[$this->alias]['password'])){
             $hasher = new SimplePasswordHasher();
-            $this-><data[$this->alias] ['password'] = $hasher->hash($this->data[$this->alias]['password']);
+            $this->data[$this->alias] ['password'] = $hasher->hash($this->data[$this->alias]['password']);
         }
         return true;
     }

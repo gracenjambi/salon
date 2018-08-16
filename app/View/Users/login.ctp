@@ -1,21 +1,3 @@
-<!--<div class=""limiter>-->
-<!--    <div class="container-login100" style="background-image: url('images/bg-01.jpg');">-->
-<!--        <div class="wrap-login100 p-1-55 p-r-55 p-t-65 p-b-54">-->
-<!--            --><?php
-//            echo $this->Form->create('User', array(
-//
-//            ));
-//            echo $this->Form->input('User.username');
-//            echo $this->Form->input('User.password');
-////            echo $this->Html->link('forgot_password');
-//            echo $this->Form->end('Login');
-//
-//            ?>
-<!--        </div>-->
-<!---->
-<!--    </div>-->
-<!--</div>-->
-
 <head>
     <?php
         echo $this->Html->css(array(
