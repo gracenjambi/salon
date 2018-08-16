@@ -19,22 +19,24 @@ class UsersController extends AppController {
     }
 
     public function register() {
+
         if ($this->request->is('post')){
             $this->User->create();
             if ($this->User->save($this->request->data)){
                 $this->Session->setFlash(__('New user registered'));
                 return $this->redirect(array('action' => 'login'));
             }
-            $this->Session->setFlash(__('Could not register user'));
+             $this->Session->setFlash('Could not register user');
         }
     }
 
     public function login(){
+
         if ($this->request->is('post')){
             if ($this->Auth->login()){
-                return $this->redirect($this->Auth->redirectUrl());
+                return $this->redirect($this->Auth->redirectUrl('/pages/home'));
             }
-            $this->Session->setFlash(__('Incorrect username or password'));
+//            $this->Session->setFlash(__('Incorrect username or password'));
         }
     }
 
@@ -56,7 +58,26 @@ class UsersController extends AppController {
 //        }
 //    }
 
-
+//    public function profile($id = null) {
+//        $this->User->id = $id;
+//
+//        if (!$this->User->exists()) {
+//            throw new NotFoundException('Invalid user');
+//        }
+//
+//        if ($this->request->is('post') || $this->request->is('put')) {
+//            if ($this->User->save($this->request->data)) {
+//                $this->request->data['Profile']['user_id'] = $id;
+//                $this->User->Profile->save($this->request->data);
+//                $this->Session->setFlash('Your profile has een updated');
+//                $this->redirect(array('action' => 'index'));
+//            } else {
+//                $this->request->data = $this->User->read();
+//            }
+//        }
+//
+//    }
+//
 
 
 

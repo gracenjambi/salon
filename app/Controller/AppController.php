@@ -53,6 +53,7 @@ class AppController extends Controller {
         'Session',
         'Number',
         'Text'
+
     );
 
 
