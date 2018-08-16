@@ -38,7 +38,11 @@ class AppController extends Controller {
             'groupAlias' => 'Group'
         )),
         'Auth' => array(
-            //your Auth settings
+            'loginRedirect' => array('controller' => 'accounts'),
+            'logoutRedirect' => array(
+                'controller' => 'users',
+                'action' => 'login'
+            )
         ),
         'Cookie'
     );
