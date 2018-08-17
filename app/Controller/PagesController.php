@@ -77,4 +77,23 @@ class PagesController extends AppController {
 			throw new NotFoundException();
 		}
 	}
+
+	public function index(){
+        $this->loadModel('Products');
+        $productsBestSeller = $this->Products->getProductTrendByColumn('sold', 0);
+        $productsNewer = $this->Products->getProductTrendByColumn('created', 0);
+        $productsMostPopular = $this->Products->getProductTrendByColumn('visited', 0);
+
+
+        $this->loadModel('Offers');
+        $offers = $this->Offers->offersRecursive();
+
+        $this->loadModel('News');
+        $news = $this->News->getRecentNews();
+
+        $this->set(compact('userId', 'username', 'userTypes', 'smallBanners',
+            'fullBanners', 'offers', 'news', 'categories', 'subCategories',
+            'subCategoriesName', 'productsBestSeller', 'productsNewer',
+            'productsMostPopular'));
+    }
 }

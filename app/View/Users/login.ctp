@@ -3,13 +3,16 @@
         <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
             <form class="login100-form validate-form" role="form" method="post">
 					<span class="login100-form-title p-b-49">
-						Login
+						<h2><?php echo __('Login'); ?></h2>
 					</span>
 
+                    <?php
+                    echo $this->Form->create('post');
+                    ?>
                 <div class="wrap-input100 validate-input m-b-23" data-validate = "Username is required">
                     <span class="label-input100">
                         <?php
-                            echo $this->Form->input('username')
+                            echo $this->Form->input('username');
                         ?>
                     </span>
                     <input class="input100" type="text" name="username" placeholder="Type your username">
@@ -20,7 +23,7 @@
                 <div class="wrap-input100 validate-input" data-validate="Password is required">
                     <span class="label-input100">
                         <?php
-                        echo $this->Form->input('password')
+                        echo $this->Form->input('password');
                         ?>
 
                     </span>

@@ -63,23 +63,13 @@ class AppController extends Controller {
             if ($user){
                 $this->Auth-setUsser($user);
                 $this->_setCookie();
-                return $this->redirect($this->Auth->redirectUrl());
+                return $this->redirect($this->Auth->redirectUrl('pages/home'));
             }
             $this->Flash->error(__('Invalid username or password, try again'));
         }
     }
 
-    protected function _setCookie(){
-        if (!$this->request->data('remember me')){
-            return false;
-        }
-        $data = [
-            'username' => $this->request->data('username'),
-            'password' => $this->request->data('password')
-        ];
-        $this->Cookie->write('RememberMe', $data, true, '+1 week');
-        return true;
-    }
+
 
 
 
